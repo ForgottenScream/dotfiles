@@ -52,6 +52,10 @@ then
     pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
 
+# Disable history
+unset HISTFILE
+export HISTSIZE=0
+export SAVEHIST=0
 
 #Zsh Syntax Highlighting - stay at bottom of zshrc!!!
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
